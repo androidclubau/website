@@ -6,733 +6,716 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Anurag Android Club Official Website - Modernized">
+    <meta name="author" content="Anurag Android Club">
 
-    <title>Anurag Android Club</title>
+    <title>Anurag Android Club | Imagine. Innovate. Impact.</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
 
-    <!-- Theme CSS -->
+
     <link href="css/agency.min.css" rel="stylesheet">
+    
     <style>
-         .field{
-            margin: 80px;
-            border-radius: 16px;
-            border: 1px solid black;
-            width: 700px;
-            align-content: center;
-            padding: 10px;
-    }
-    .about1{
-        color: black;
-        font-size: larger;
-    }
+        /* --- 1. UPGRADED: Modern Design System & Variables --- */
+        :root {
+            --c-primary: #1a202c;          /* Deep Charcoal */
+            --c-primary-light: #2d3748;   /* Lighter Charcoal for elements */
+            --c-accent: #00DC82;          /* Vibrant, modern Android Green */
+            --c-accent-dark: #00B86B;      /* Darker green for hovers */
+            --c-bg-main: #f7fafc;          /* Very light grey for main background */
+            --c-bg-card: #ffffff;         /* White for cards */
+            --c-white: #ffffff;
+            --c-dark-text: #2d3748;
+            --c-muted-text: #718096;
+            
+            --font-main: 'Roboto', sans-serif;
+            --font-heading: 'Roboto', sans-serif;
+            --font-brand: 'Orbitron', sans-serif;
+
+            --shadow-sm: 0 4px 15px rgba(0,0,0,0.04);
+            --shadow-lg: 0 10px 30px rgba(45, 55, 72, 0.1);
+            --border-radius: 16px;
+            --transition: all 0.3s ease-in-out;
+        }
+
+        /* --- 2. Global Styles & Resets --- */
+        body {
+            font-family: var(--font-main);
+            background-color: var(--c-bg-main);
+            color: var(--c-dark-text);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            color: var(--c-primary);
+        }
+
+        p {
+            line-height: 1.7;
+            font-size: 1.05rem;
+            color: var(--c-muted-text);
+        }
+        
+        a:focus-visible,
+        button:focus-visible,
+        .grid-item a:focus-visible {
+            outline: 3px solid var(--c-accent);
+            outline-offset: 3px;
+            border-radius: 6px;
+        }
+
+        section {
+            padding: 120px 0;
+        }
+        
+        .section-heading {
+            margin-bottom: 20px;
+            font-size: clamp(2.5rem, 5vw, 3.2rem);
+            font-weight: 700;
+        }
+
+        .section-subheading {
+            font-family: var(--font-main);
+            font-style: normal;
+            font-size: 1.25rem;
+            margin-bottom: 80px;
+            color: var(--c-muted-text);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- 3. UPGRADED: Components & Sections --- */
+        .navbar-custom {
+            background-color: rgba(26, 32, 44, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: none;
+            padding: 15px 0;
+            transition: padding 0.3s ease, background-color 0.3s ease;
+        }
+        .navbar-custom .navbar-brand {
+            font-family: var(--font-brand);
+            color: var(--c-accent);
+            font-size: 2em;
+            transition: color 0.3s ease;
+        }
+        .navbar-custom .navbar-brand:hover {
+            color: var(--c-white);
+        }
+        .navbar-custom .nav li a {
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+        .navbar-custom .nav li a:hover,
+        .navbar-custom .nav li.active a {
+            color: var(--c-white);
+            outline: none;
+        }
+        .navbar-custom.affix {
+            padding: 10px 0;
+            background-color: var(--c-primary);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        header {
+    
+    background-image: linear-gradient(rgba(26, 32, 44, 0.85), rgba(26, 32, 44, 0.9)), url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=1740');
+    background-color: var(--c-primary);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    color: var(--c-white);
+    padding: 250px 0;
+}
+        header .intro-heading {
+            font-size: clamp(2.8rem, 7vw, 5rem);
+            font-weight: 700;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        header .intro-lead-in {
+             font-size: clamp(1.2rem, 3vw, 1.5rem);
+             font-weight: 400;
+             margin-bottom: 25px;
+             color: rgba(255, 255, 255, 0.9);
+        }
+        header .btn-xl {
+            background-color: var(--c-accent);
+            border: 2px solid var(--c-accent);
+            color: var(--c-primary);
+            font-weight: 700;
+            padding: 18px 40px;
+            border-radius: 50px;
+            transition: var(--transition);
+        }
+        header .btn-xl:hover, header .btn-xl:focus {
+            background-color: var(--c-accent-dark);
+            border-color: var(--c-accent-dark);
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: var(--shadow-lg);
+        }
+
+        #about { background-color: var(--c-white); }
+        #about .about-content {
+            border-radius: var(--border-radius);
+            background-color: var(--c-bg-card);
+            padding: 50px;
+            max-width: 850px;
+            margin: 0 auto;
+            box-shadow: var(--shadow-lg);
+            text-align: left;
+        }
+        #about .about-content strong {
+            color: var(--c-primary);
+            font-size: 1.1em;
+            font-weight: 700;
+        }
+        
+        .grid-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        .grid-container > [class*='col-'] {
+            width: auto;
+            margin: 0 !important;
+            padding: 0 !important;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .grid-item {
+            background: var(--c-bg-card);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            overflow: hidden;
+            border: 2px solid transparent;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .grid-item:hover {
+            transform: translateY(-12px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--c-accent);
+        }
+
+        #portfolio, #app, #team, #work {
+            background-color: var(--c-bg-main);
+        }
+        .grid-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        .portfolio-caption {
+            padding: 25px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .portfolio-caption h4 { margin-top: 0; }
+
+        #work { background-color: var(--c-white); }
+        .focus-icon-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+            width: 100px;
+            margin: 0 auto 25px auto;
+            border-radius: 50%;
+            background-color: var(--c-accent);
+            color: var(--c-primary);
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0, 220, 130, 0.3);
+        }
+        .service-box:hover .focus-icon-wrapper {
+            transform: scale(1.1) rotate(10deg);
+            box-shadow: 0 8px 25px rgba(0, 220, 130, 0.4);
+        }
+        .focus-icon-wrapper .fa { font-size: 40px; }
+
+
+        #about1 { background-color: var(--c-white); }
+        .timeline:before {
+            background-image: linear-gradient(to bottom, var(--c-accent), var(--c-primary));
+        }
+        .timeline .timeline-image {
+            background-color: var(--c-accent);
+            animation: pulse 2.5s infinite;
+            box-shadow: 0 0 0 0 var(--c-accent);
+        }
+        @keyframes pulse {
+            to { box-shadow: 0 0 0 20px rgba(0, 220, 130, 0); }
+        }
+        .timeline .timeline-image h4 { color: var(--c-primary); font-weight: 700; }
+        .timeline .img-circle {
+            width: 100%; height: 100%; object-fit: cover;
+        }
+
+        .team-member {
+            text-align: center; 
+            height: 100%;
+        }
+        .team-member img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            object-position: top;
+            filter: grayscale(80%);
+            transition: var(--transition);
+        }
+        .grid-item:hover .team-member img {
+            filter: grayscale(0%);
+        }
+        .team-member h4 { margin: 20px 0 5px 0; }
+
+        footer {
+            background-color: var(--c-primary);
+            color: var(--c-muted-text);
+            padding: 60px 0;
+            text-align: center;
+        }
+        footer .col-md-4 { margin-bottom: 30px; }
+        footer h4 {
+            color: var(--c-white);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-size: 1.1em;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        footer .copyright {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9em;
+        }
+        .social-buttons { padding: 0; }
+        .social-buttons li a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: var(--c-primary-light);
+            color: var(--c-white);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+        .social-buttons li a:hover {
+            background-color: var(--c-accent);
+            color: var(--c-primary);
+            transform: translateY(-8px);
+        }
+
+        @media (max-width: 767px) {
+            section { padding: 80px 0; }
+            .section-subheading { margin-bottom: 50px; }
+            header { background-attachment: scroll; padding: 150px 0;}
+            .timeline:before { left: 30px; }
+            .timeline > li .timeline-panel { float: right; width: calc(100% - 80px); }
+            .timeline > li.timeline-inverted > .timeline-panel { float: right; }
+            .timeline > li .timeline-image { left: 0; margin-left: -10px; width: 80px; height: 80px; }
+            .timeline > li .timeline-image h4 { font-size: 0.8em; margin-top: 15px; }
+        }
     </style>
 </head>
 
 <body id="page-top" class="index">
 
-    <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">ANDROID CLUB</a>
             </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">about</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio">events</a>
-                    </li>
-					<li>
-                        <a class="page-scroll" href="#app">apps</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about1">achievements</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#team">Team</a>
-                    </li>
-					<li>
-                        <a class="page-scroll" href="#work">Our Work</a>
-                    </li>
-                    
+                    <li class="hidden"><a href="#page-top"></a></li>
+                    <li><a class="page-scroll" href="#about">About</a></li>
+                    <li><a class="page-scroll" href="#work">Our Focus</a></li>
+                    <li><a class="page-scroll" href="#portfolio">Events</a></li>
+                    <li><a class="page-scroll" href="#app">Apps</a></li>
+                    <li><a class="page-scroll" href="#about1">Achievements</a></li>
+                    <li><a class="page-scroll" href="#team">Team</a></li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container-fluid -->
     </nav>
 
-    <!-- Header -->
     <header>
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in"></div>
-                <div class="intro-heading"></div>
-				<a href="#about" class="btn btn-circle page-scroll">
-                            <i  style="font-size:36px;color:white" class="fa fa-angle-double-down"></i>
-                        </a>
-               
+                <div class="intro-lead-in">Welcome to the Anurag Android Club</div>
+                <div class="intro-heading">Imagine. Innovate. Impact.</div>
+                <a href="#about" class="page-scroll btn btn-xl">Learn More</a>
             </div>
         </div>
     </header>
-	
-	
-	 
-	
-	
-	
-	
-	
-	
-
-    <!-- Services Section -->
-	
-	
-	<!--about-->
-	<section class="bg-primary" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <center>
-                    <fieldset class="field">
-               
-                    <p class="about1"><br><br><strong>About Us --</strong> <br><br>Android Club is to facilitate the training and workshops to the students 
-                        who are interested in App Development.<br>This club also provides the projects and way to do the 
-                        projects which are complex.<br>The Training is provided by the external resource persons who will 
-                        be very interactive and allow students to develop their own ideas into an app.<br><br>
-                    <strong>OBJECTIVES --</strong><br><br>
-                    1)The main objective of the Android Club is to provide the basic knowlege of app development.<br>
-                    2)To develop Hands-on-Projects by the students who are interested. <br><br>
-                    <strong>OUTCOMES--</strong><br><br>
-                    Students learn advanced app development.<br>
-                    Students get certification from Google developers, App Brewery, etc.<br><br>
-                    Real-time project experience.<br><br>
-                    <strong>MISSION --</strong><br><br>
-                    Through training, the club will encourage the creation and growth of complex Android apps.<br><br>
-                    <strong>VISION --</strong><br><br>
-                    To develop Android applications for the purpose of improving the overall quality of life in the community.</p><br>
-                </div>
-            </center>
-                
-                </fieldset>
-                    
-                </div>
-            </div>
-        </div>
-    </section>
-	<!--about end-->
-	
-	
-	
-	
-    <section id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">What we do here!</h2>
-                    <h3 class="section-subheading text-muted"><b><I>Imagine. Innovate. Impact.</I></b><br>That is our club's motto, which we make sure to induce into young minds associating with us. Android Club entertains a wide variety of activities to shape one's interest in Android platform like.</h3>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-mobile fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Workshops</h4>
-                    <p class="text-muted"> We bridge the technological gap between the curriculum and the industry by conducting workshops with experienced professionals who have excelled in Android Development.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Hackathons</h4>
-                    <p class="text-muted">Unlimited hours of coding and a creative mind is the best combination for a Android developer. We provide many fast paced competitions to the students in order to up their game in the development field.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-graduation-cap fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Training</h4>
-                    <p class="text-muted">We also provide training to the students interested in learning more about the Android development. We also aid and guide them in the projects taken up by them and also fund their publishing.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Grid Section -->
-    <section id="portfolio" class="bg-light-gray">
-  <div class="container">
-
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2 class="section-heading"><a href="events.html">Events</a></h2>
-        <h3 class="section-subheading text-muted">Adding up to the many events conducted by our club, these are a few to name.</h3>
-      </div>
-    </div>
-
-    <div class="row">
-      <!-- Event 1 -->
-      <div class="col-md-3 col-sm-6 portfolio-item">
-        <img src="img/portfolio/gdsc collab.jpg" class="img-responsive" alt="">
-        <div class="portfolio-caption">
-          <h4>Android Compose Camp</h4>
-          <p class="text-muted">Organised by Android Club in collaboration with GDSC</p>
-        </div>
-      </div>
-
-      <!-- Event 2 -->
-      <div class="col-md-3 col-sm-6 portfolio-item">
-        <img src="img/portfolio/3dbootcamp.jpg" class="img-responsive" alt="">
-        <div class="portfolio-caption">
-          <h4>3D Bootcamp</h4>
-          <p class="text-muted">In collaboration with ISTE Student Chapter</p>
-        </div>
-      </div>
-
-      <!-- Event 3 -->
-      <div class="col-md-3 col-sm-6 portfolio-item">
-        <img src="img/portfolio/b&solve.jpg" class="img-responsive" alt="">
-        <div class="portfolio-caption">
-          <h4>Burst & Solve</h4>
-          <p class="text-muted">Fun game-based technical event by Android Club</p>
-        </div>
-      </div>
-
-      <!-- Event 4 -->
-      <div class="col-md-3 col-sm-6 portfolio-item">
-        <img src="img/portfolio/inaugration.png" class="img-responsive" alt="">
-        <div class="portfolio-caption">
-          <h4>Inauguration</h4>
-          <p class="text-muted">Our Humble Beginnings</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <!-- Event 5 -->
-      <div class="col-md-3 col-sm-6 portfolio-item">
-        <img src="img/portfolio/app dev.jpeg" class="img-responsive" alt="">
-        <div class="portfolio-caption">
-          <h4>App Dev Workshop</h4>
-          <p class="text-muted">Android App Development hands-on session</p>
-        </div>
-      </div>
-
-      <!-- Event 6 -->
-      <div class="col-md-3 col-sm-6 portfolio-item">
-        <img src="img/portfolio/workshop.jpg" class="img-responsive" alt="">
-        <div class="portfolio-caption">
-          <h4>Basics of App Dev</h4>
-          <p class="text-muted">Introduction to Android app creation</p>
-        </div>
-      </div>
-
-      <!-- Event 7 (New) -->
-      <div class="col-md-3 col-sm-6 portfolio-item">
-        <img src="img/portfolio/fundamentals.jpg" class="img-responsive" style="height: 200px; object-fit: cover; width: 100%;" alt="">
-        <div class="portfolio-caption">
-          <h4>Android Fundamentals</h4>
-          <p class="text-muted">Introduction to Android Basics</p>
-        </div>
-      </div>
-
-      <!-- Event 8 (New) -->
-      <div class="col-md-3 col-sm-6 portfolio-item">
-        <img src="img/portfolio/flutter.jpg" class="img-responsive" alt="">
-        <div class="portfolio-caption">
-          <h4>Flutter Fest</h4>
-          <p class="text-muted">Event focused on Flutter development</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-	
-	
-				
-				<section id="app" class="bg-light-gray">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2 class="section-heading">Apps</h2>
-        <h3 class="section-subheading text-muted">Adding up to the many Apps published by our club, these are a few to name.</h3>
-      </div>
-    </div>
-
-    <div class="row" style="display: flex; flex-wrap: wrap; justify-content: center;">
-
-      <!-- Repeat this block for each app -->
-      <div class="col-md-4 col-sm-6 portfolio-item" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 30px;">
-        <a href="https://drive.google.com/drive/folders/1ZZ9B3L24UuIYlQgCb8WipcQbGIKBG7CD" class="portfolio-link" style="display: block; width: 180px; height: 180px; overflow: hidden; background-color: #f0f0f0; border-radius: 10px;">
-          <img src="img/portfolio/split_ease.png" class="img-responsive" alt="Split Ease App" style="width: 100%; height: 100%; object-fit: cover;">
-        </a>
-        <div class="portfolio-caption text-center">
-          <h4>Split Ease</h4>
-          <p class="text-muted">App for Expenses Splitting</p>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6 portfolio-item" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 30px;">
-        <a href="https://drive.google.com/file/d/1q98naWqt7_jtHbsZtnLbgq3zIA-sNup6/view?usp=drivesdk" class="portfolio-link" style="display: block; width: 180px; height: 180px; overflow: hidden; background-color: #f0f0f0; border-radius: 10px;">
-          <img src="img/portfolio/attendance.png" class="img-responsive" alt="Virtual Attender App" style="width: 100%; height: 100%; object-fit: cover;">
-        </a>
-        <div class="portfolio-caption text-center">
-          <h4>Virtual Attender</h4>
-          <p class="text-muted">Attendance management app for College</p>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6 portfolio-item" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 30px;">
-        <a href="https://drive.google.com/drive/folders/1ejvaEm-fI7rS0W3avwrL9et6BisUek44" class="portfolio-link" style="display: block; width: 180px; height: 180px; overflow: hidden; background-color: #f0f0f0; border-radius: 10px;">
-          <img src="img/portfolio/calculator.png" class="img-responsive" alt="Calculator App" style="width: 100%; height: 100%; object-fit: cover;">
-        </a>
-        <div class="portfolio-caption text-center">
-          <h4>Calculator</h4>
-          <p class="text-muted">A student-made Calculator app</p>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6 portfolio-item" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 30px;">
-        <a href="https://drive.google.com/file/d/19y2_fEDQenxf3c5iA--gAjsrO-GNHXZ1/view?usp=sharing" class="portfolio-link" style="display: block; width: 180px; height: 180px; overflow: hidden; background-color: #f0f0f0; border-radius: 10px;">
-          <img src="img/portfolio/game.png" class="img-responsive" alt="Game Hub App" style="width: 100%; height: 100%; object-fit: cover;">
-        </a>
-        <div class="portfolio-caption text-center">
-          <h4>Game Hub</h4>
-          <p class="text-muted">Stress Free Games</p>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6 portfolio-item" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 30px;">
-        <a href="https://drive.google.com/drive/folders/1PMOtQ0G7lgRW-9IXwlO412GGuwTUGJ0s" class="portfolio-link" style="display: block; width: 180px; height: 180px; overflow: hidden; background-color: #f0f0f0; border-radius: 10px;">
-          <img src="img/portfolio/todo.png" class="img-responsive" alt="To Do List App" style="width: 100%; height: 100%; object-fit: cover;">
-        </a>
-        <div class="portfolio-caption text-center">
-          <h4>To Do List</h4>
-          <p class="text-muted">A Remainder App</p>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6 portfolio-item" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 30px;">
-        <a href="https://play.google.com/store/apps/developer?id=ANURAG%20ANDROID%20CLUB&hl=en" class="portfolio-link" style="display: block; width: 180px; height: 180px; overflow: hidden; background-color: #f0f0f0; border-radius: 10px;">
-          <img src="img/portfolio/others2.png" class="img-responsive" alt="AAC Playstore Link" style="width: 100%; height: 100%; object-fit: cover;">
-        </a>
-        <div class="portfolio-caption text-center">
-          <h4>AAC Playstore</h4>
-          <p class="text-muted">Click to see all our apps</p>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6 portfolio-item" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 30px;">
-        <a href="https://play.google.com/store/apps/details?id=com.androidclubagi.career" class="portfolio-link" style="display: block; width: 180px; height: 180px; overflow: hidden; background-color: #f0f0f0; border-radius: 10px;">
-          <img src="images/careerguid.webp" class="img-responsive" alt="Career Guide App" style="width: 100%; height: 100%; object-fit: cover;">
-        </a>
-        <div class="portfolio-caption text-center">
-          <h4>Career Guide</h4>
-          <p class="text-muted">Shows a career path to students</p>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6 portfolio-item" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 30px;">
-        <a href="https://play.google.com/store/apps/details?id=com.kaushikb1996.inventorymanager" class="portfolio-link" style="display: block; width: 180px; height: 180px; overflow: hidden; background-color: #f0f0f0; border-radius: 10px;">
-          <img src="images/inventory.webp" class="img-responsive" alt="Inventory Manager App" style="width: 100%; height: 100%; object-fit: cover;">
-        </a>
-        <div class="portfolio-caption text-center">
-          <h4>Inventory Manager</h4>
-          <p class="text-muted">Digitises inventory management</p>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6 portfolio-item" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 30px;">
-        <a href="https://play.google.com/store/apps/details?id=com.andro.saikumar.a3x3" class="portfolio-link" style="display: block; width: 180px; height: 180px; overflow: hidden; background-color: #f0f0f0; border-radius: 10px;">
-          <img src="images/sort.webp" class="img-responsive" alt="Sort It Puzzle Game" style="width: 100%; height: 100%; object-fit: cover;">
-        </a>
-        <div class="portfolio-caption text-center">
-          <h4>Sort it!!</h4>
-          <p class="text-muted">A Puzzle Game</p>
-        </div>
-      </div>
-
-      <!-- Final 3 apps included below -->
-
-      <div class="col-md-4 col-sm-6 portfolio-item" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 30px;">
-        <a href="https://play.google.com/store/apps/details?id=com.agi.billsplit" class="portfolio-link" style="display: block; width: 180px; height: 180px; overflow: hidden; background-color: #f0f0f0; border-radius: 10px;">
-          <img src="images/bill.webp" class="img-responsive" alt="Bill Splitter App" style="width: 100%; height: 100%; object-fit: cover;">
-        </a>
-        <div class="portfolio-caption text-center">
-          <h4>Bill Splitter</h4>
-          <p class="text-muted">Track individual expenses</p>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6 portfolio-item" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 30px;">
-        <a href="https://play.google.com/store/apps/details?id=com.harishkumar.android.examprep" class="portfolio-link" style="display: block; width: 180px; height: 180px; overflow: hidden; background-color: #f0f0f0; border-radius: 10px;">
-          <img src="images/exam.webp" class="img-responsive" alt="Exam Prep App" style="width: 100%; height: 100%; object-fit: cover;">
-        </a>
-        <div class="portfolio-caption text-center">
-          <h4>Exam Prep</h4>
-          <p class="text-muted">Helps students prepare for exams</p>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6 portfolio-item" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 30px;">
-        <a href="https://play.google.com/store/apps/details?id=com.charan.saicharanreddy.bloodbank" class="portfolio-link" style="display: block; width: 180px; height: 180px; overflow: hidden; background-color: #f0f0f0; border-radius: 10px;">
-          <img src="images/blood.webp" class="img-responsive" alt="Blood Bank App" style="width: 100%; height: 100%; object-fit: cover;">
-        </a>
-        <div class="portfolio-caption text-center">
-          <h4>Blood Bank</h4>
-          <p class="text-muted">Find blood donors by area</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
- <!-- Achievements -->
-</section>
-	<section id="about1">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2 class="section-heading">Achievements</h2>
-        <h3 class="section-subheading text-muted">.</h3>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <ul class="timeline">
-
-          <li>
-            <div class="timeline-image" style="width: 150px; height: 150px; overflow: hidden; margin-left: -75px;">
-              <img class="img-circle img-responsive" src="img/about/5.png" alt="" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4>2025</h4>
-                <h4 class="subheading">Winners of TechXcelerate</h4>
-              </div>
-              <div class="timeline-body">
-                <p class="text-muted">Our team won first prize in showcasing an innovative app-based solution.</p>
-              </div>
-            </div>
-          </li>
-
-          <li class="timeline-inverted">
-            <div class="timeline-image" style="width: 150px; height: 150px; overflow: hidden; margin-left: -75px;">
-              <img class="img-circle img-responsive" src="img/about/4.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4>2024</h4>
-                <h4 class="subheading">Winners of TechHack</h4>
-              </div>
-              <div class="timeline-body">
-                <p class="text-muted">Our team members won the TechHack competition by developing a feature-rich mobile app.</p>
-              </div>
-            </div>
-          </li>
-
-          <li>
-            <div class="timeline-image" style="width: 150px; height: 150px; overflow: hidden; margin-left: -75px;">
-              <img class="img-circle img-responsive" src="images/apps.png" alt="" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4>2022</h4>
-                <h4 class="subheading">Submission of Android apps</h4>
-              </div>
-              <div class="timeline-body">
-                <p class="text-muted">Our students got rewarded by our Dean - School of Engineering.</p>
-              </div>
-            </div>
-          </li>
-
-          <li class="timeline-inverted">
-            <div class="timeline-image" style="width: 150px; height: 150px; overflow: hidden; margin-left: -75px;">
-              <img class="img-circle img-responsive" src="images/pulse.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4>2021</h4>
-                <h4 class="subheading">Launch of AU Pulse</h4>
-              </div>
-              <div class="timeline-body">
-                <p class="text-muted">Our students successfully deployed the AU Pulse app in the playstore.</p>
-              </div>
-            </div>
-          </li>
-
-          <li>
-            <div class="timeline-image" style="width: 150px; height: 150px; overflow: hidden; margin-left: -75px;">
-              <img class="img-circle img-responsive" src="images/codechef.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4>2020</h4>
-                <h4 class="subheading">Launch of Codechef-AU</h4>
-              </div>
-              <div class="timeline-body">
-                <p class="text-muted">Our students created this app for conducting coding related competitions.</p>
-              </div>
-            </div>
-          </li>
-
-          <li class="timeline-inverted">
-            <div class="timeline-image" style="width: 150px; height: 150px; overflow: hidden; margin-left: -75px;">
-              <img class="img-circle img-responsive" src="images/eventium.png" alt="" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4>2019</h4>
-                <h4 class="subheading">Launch of eventium</h4>
-              </div>
-              <div class="timeline-body">
-                <p class="text-muted">Our students successfully deployed the eventium app in the playstore.</p>
-              </div>
-            </div>
-          </li>
-
-          <li>
-            <div class="timeline-image" style="width: 150px; height: 150px; overflow: hidden; margin-left: -75px;">
-              <img class="img-circle img-responsive" src="img/about/3.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4>2017</h4>
-                <h4 class="subheading">Certificate By RankSheet</h4>
-              </div>
-              <div class="timeline-body">
-                <p class="text-muted">59 of our students were certified as Android Professionals by RankSheet.</p>
-              </div>
-            </div>
-          </li>
-
-          <li class="timeline-inverted">
-            <div class="timeline-image" style="width: 150px; height: 150px; overflow: hidden; margin-left: -75px;">
-              <img class="img-circle img-responsive" src="img/about/1.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4>March 2016</h4>
-                <h4 class="subheading">Being Selected in NADC as finalists</h4>
-              </div>
-              <div class="timeline-body">
-                <p class="text-muted">Among a huge lot of students for NADC, 4 of our students were selected for the Grand Finale at IIT Madras.</p>
-              </div>
-            </div>
-          </li>
-
-          <li>
-            <div class="timeline-image" style="width: 150px; height: 150px; overflow: hidden; margin-left: -75px;">
-              <img class="img-circle img-responsive" src="img/about/2.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4>2016</h4>
-                <h4 class="subheading">Certificate of Merit By NADC</h4>
-              </div>
-              <div class="timeline-body">
-                <p class="text-muted">Our students received the Zonal Merit certificate awarded by NADC.</p>
-              </div>
-            </div>
-          </li>
-
-          <li class="timeline-inverted">
-            <div class="timeline-image" style="width: 150px; height: 150px; margin-left: -75px; display: flex; align-items: center; justify-content: center; text-align: center;">
-              <h4>And Many<br>More!</h4>
-            </div>
-          </li>
-
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
- <!-- Team Section -->
-<section id="team" class="bg-light-gray">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2 class="section-heading"><a href="team.html">Our Amazing Team</a></h2>
-      </div>
-    </div>
-
-    <!-- Row 1: Two Members Centered using offset -->
-    <div class="row text-center">
-      <div class="col-sm-4 col-sm-offset-2">
-        <div class="team-member">
-          <img src="images/BhagyaRekha1.jpg" class="img-responsive img-square" style="object-fit: cover; width: 100%; height: 360px;" alt="">
-          <h4>Bhagya Rekha</h4>
-          <p class="text-muted">Faculty Lead</p>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="team-member">
-          <img src="images/Harsha.png" class="img-responsive img-square" style="object-fit: cover; width: 100%; height: 360px;" alt="">
-          <h4>Harsha</h4>
-          <p class="text-muted">President</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Row 2: 3 Members -->
-    <div class="row text-center">
-      <div class="col-sm-4">
-        <div class="team-member">
-          <img src="images/Diksitha.JPG" class="img-responsive img-square" style="object-fit: cover; width: 100%; height: 360px;" alt="">
-          <h4>A. Dikshitha Reddy</h4>
-          <p class="text-muted">Vice President Technical</p>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="team-member">
-          <img src="images/Rachita.jpg" class="img-responsive img-square" style="object-fit: cover; width: 100%; height: 360px;" alt="">
-          <h4>G. Rachitha</h4>
-          <p class="text-muted">Vice President Organising</p>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="team-member">
-          <img src="images/esha.jpg" class="img-responsive img-square" style="object-fit: cover; width: 100%; height: 360px;" alt="">
-          <h4>V. Esha Reddy</h4>
-          <p class="text-muted">Vice President Public Relations</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Row 3: 3 Members -->
-    <div class="row text-center">
-      <div class="col-sm-4">
-        <div class="team-member">
-          <img src="images/Thejaswee Shivakoti.jpg" class="img-responsive img-square" style="object-fit: cover; width: 100%; height: 360px;" alt="">
-          <h4>S. Thejaswee</h4>
-          <p class="text-muted">Treasurer</p>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="team-member">
-          <img src="images/vignesh.jpg" class="img-responsive img-square" style="object-fit: cover; width: 100%; height: 360px;" alt="">
-          <h4>B. Vigneshwar</h4>
-          <p class="text-muted">App Developer</p>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="team-member">
-          <img src="images/poojan.jpg" class="img-responsive img-square" style="object-fit: cover; width: 100%; height: 360px;" alt="">
-          <h4>Poojan</h4>
-          <p class="text-muted">Website Developer</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Row 4: One Member Centered using offset -->
-    <div class="row text-center">
-      <div class="col-sm-4 col-sm-offset-4">
-        <div class="team-member">
-          <img src="images/Ranjith.jpeg" class="img-responsive img-square" style="object-fit: cover; width: 100%; height: 360px;" alt="">
-          <h4>D. Ranjith</h4>
-          <p class="text-muted">Social Media and Design Lead</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-	<section id="work">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Our Work</h2>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-mobile fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Apps</h4>
-                    <p class="text-muted"> We have successfully deployed 26 android applications in play store and many more are under development.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Events</h4>
-                    <p class="text-muted">We have successfully conducted more than 8 events.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-graduation-cap fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Workshops</h4>
-                    <p class="text-muted">We have conducted more than 25 workshops, specially for the students of 2nd year B.tech on developing simple applications with a very good UI.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">About Us</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                        <div class="about-content">
+                               <p><strong>About Us --</strong><br>Android Club is to facilitate the training and workshops to the students who are interested in App Development. This club also provides the projects and way to do the projects which are complex. The Training is provided by the external resource persons who will be very interactive and allow students to develop their own ideas into an app.</p>
+                               <p><strong>OBJECTIVES --</strong><br>1) The main objective of the Android Club is to provide the basic knowlege of app development.<br>2) To develop Hands-on-Projects by the students who are interested.</p>
+                               <p><strong>OUTCOMES --</strong><br>Students learn advanced app development. Students get certification from Google developers, App Brewery, etc. Real-time project experience.</p>
+                               <p><strong>MISSION --</strong><br>Through training, the club will encourage the creation and growth of complex Android apps.</p>
+                               <p><strong>VISION --</strong><br>To develop Android applications for the purpose of improving the overall quality of life in the community.</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="work">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Our Focus</h2>
+                    <h3 class="section-subheading">That is our club's motto, which we make sure to induce into young minds associating with us.</h3>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4 service-box">
+                    <span class="fa-stack fa-4x focus-icon-wrapper">
+                        <i class="fa fa-mobile fa-stack-1x"></i>
+                    </span>
+                    <h4 class="service-heading">App Development</h4>
+                    <p class="text-muted">We have successfully deployed numerous android applications to the Play Store, with many more currently under development.</p>
+                </div>
+                <div class="col-md-4 service-box">
+                    <span class="fa-stack fa-4x focus-icon-wrapper">
+                        <i class="fa fa-laptop fa-stack-1x"></i>
+                    </span>
+                    <h4 class="service-heading">Community Events</h4>
+                    <p class="text-muted">We provide many fast-paced competitions and hackathons to help students sharpen their skills in the development field.</p>
+                </div>
+                <div class="col-md-4 service-box">
+                       <span class="fa-stack fa-4x focus-icon-wrapper">
+                        <i class="fa fa-users fa-stack-1x"></i>
+                    </span>
+                    <h4 class="service-heading">Hands-on Workshops</h4>
+                    <p class="text-muted">We conduct workshops with experienced professionals to bridge the gap between curriculum and industry standards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Events</h2>
+                    <h3 class="section-subheading">A few of the many events conducted by our club.</h3>
+                </div>
+            </div>
+            <div class="row grid-container">
+                <div class="col-md-3 col-sm-6 grid-item">
+                    <img src="img/portfolio/gdsc collab.jpg" class="img-responsive" alt="Android Compose Camp poster with GDSC and Android Club logos">
+                    <div class="portfolio-caption"><h4>Android Compose Camp</h4><p class="text-muted">Organised by Android Club in collaboration with GDSC</p></div>
+                </div>
+                <div class="col-md-3 col-sm-6 grid-item">
+                    <img src="img/portfolio/3dbootcamp.jpg" class="img-responsive" alt="3D Bootcamp event poster">
+                    <div class="portfolio-caption"><h4>3D Bootcamp</h4><p class="text-muted">In collaboration with ISTE Student Chapter</p></div>
+                </div>
+                <div class="col-md-3 col-sm-6 grid-item">
+                    <img src="img/portfolio/b&solve.jpg" class="img-responsive" alt="Burst & Solve technical event poster">
+                    <div class="portfolio-caption"><h4>Burst & Solve</h4><p class="text-muted">Fun game-based technical event by Android Club</p></div>
+                </div>
+                <div class="col-md-3 col-sm-6 grid-item">
+                    <img src="img/portfolio/inaugration.png" class="img-responsive" alt="Inauguration ceremony of the Android Club">
+                    <div class="portfolio-caption"><h4>Inauguration</h4><p class="text-muted">Our Humble Beginnings</p></div>
+                </div>
+                <div class="col-md-3 col-sm-6 grid-item">
+                    <img src="img/portfolio/app dev.jpeg" class="img-responsive" alt="Students attending an app development workshop">
+                    <div class="portfolio-caption"><h4>App Dev Workshop</h4><p class="text-muted">Android App Development hands-on session</p></div>
+                </div>
+                <div class="col-md-3 col-sm-6 grid-item">
+                    <img src="img/portfolio/workshop.jpg" class="img-responsive" alt="Poster for Basics of App Development workshop">
+                    <div class="portfolio-caption"><h4>Basics of App Dev</h4><p class="text-muted">Introduction to Android app creation</p></div>
+                </div>
+                <div class="col-md-3 col-sm-6 grid-item">
+                    <img src="img/portfolio/fundamentals.jpg" class="img-responsive" alt="Android Fundamentals event poster">
+                    <div class="portfolio-caption"><h4>Android Fundamentals</h4><p class="text-muted">Introduction to Android Basics</p></div>
+                </div>
+                <div class="col-md-3 col-sm-6 grid-item">
+                    <img src="img/portfolio/flutter.jpg" class="img-responsive" alt="Flutter Fest event promotion">
+                    <div class="portfolio-caption"><h4>Flutter Fest</h4><p class="text-muted">Event focused on Flutter development</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="app">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Apps</h2>
+                    <h3 class="section-subheading">A selection of apps built and published by our club members.</h3>
+                </div>
+            </div>
+            <div class="row grid-container">
+                <div class="col-md-3 col-sm-6 grid-item">
+                    <a href="https://drive.google.com/drive/folders/1ZZ9B3L24UuIYlQgCb8WipcQbGIKBG7CD" class="portfolio-link"><img src="img/portfolio/split_ease.png" class="img-responsive" alt="Screenshot of Split Ease app for splitting expenses"></a>
+                    <div class="portfolio-caption"><h4>Split Ease</h4><p class="text-muted">App for Expenses Splitting</p></div>
+                </div>
+                <div class="col-md-3 col-sm-6 grid-item">
+                    <a href="https://drive.google.com/file/d/1q98naWqt7_jtHbsZtnLbgq3zIA-sNup6/view?usp=drivesdk" class="portfolio-link"><img src="img/portfolio/attendance.png" class="img-responsive" alt="Screenshot of Virtual Attender attendance management app"></a>
+                    <div class="portfolio-caption"><h4>Virtual Attender</h4><p class="text-muted">Attendance management app</p></div>
+                </div>
+                <div class="col-md-3 col-sm-6 grid-item">
+                    <a href="https://drive.google.com/drive/folders/1ejvaEm-fI7rS0W3avwrL9et6BisUek44" class="portfolio-link"><img src="img/portfolio/calculator.png" class="img-responsive" alt="Screenshot of a student-made calculator app"></a>
+                    <div class="portfolio-caption"><h4>Calculator</h4><p class="text-muted">A student-made Calculator</p></div>
+                </div>
+                <div class="col-md-3 col-sm-6 grid-item">
+                    <a href="https://drive.google.com/file/d/19y2_fEDQenxf3c5iA--gAjsrO-GNHXZ1/view?usp=sharing" class="portfolio-link"><img src="img/portfolio/game.png" class="img-responsive" alt="Screenshot of Game Hub app"></a>
+                    <div class="portfolio-caption"><h4>Game Hub</h4><p class="text-muted">Stress Free Games</p></div>
+                </div>
+                <div class="col-md-3 col-sm-6 grid-item">
+                    <a href="https://drive.google.com/drive/folders/1PMOtQ0G7lgRW-9IXwlO412GGuwTUGJ0s" class="portfolio-link"><img src="img/portfolio/todo.png" class="img-responsive" alt="Screenshot of a To Do List app"></a>
+                    <div class="portfolio-caption"><h4>To Do List</h4><p class="text-muted">A Reminder App</p></div>
+                </div>
+                <div class="col-md-3 col-sm-6 grid-item">
+                    <a href="https://play.google.com/store/apps/details?id=com.androidclubagi.career" class="portfolio-link"><img src="images/careerguid.webp" class="img-responsive" alt="Screenshot of Career Guide app"></a>
+                    <div class="portfolio-caption"><h4>Career Guide</h4><p class="text-muted">Shows a career path</p></div>
+                </div>
+                <div class="col-md-3 col-sm-6 grid-item">
+                    <a href="https://play.google.com/store/apps/details?id=com.kaushikb1996.inventorymanager" class="portfolio-link"><img src="images/inventory.webp" class="img-responsive" alt="Screenshot of Inventory Manager app"></a>
+                    <div class="portfolio-caption"><h4>Inventory Manager</h4><p class="text-muted">Digitises inventory</p></div>
+                </div>
+                <div class="col-md-3 col-sm-6 grid-item">
+                    <a href="https://play.google.com/store/apps/details?id=com.andro.saikumar.a3x3" class="portfolio-link"><img src="images/sort.webp" class="img-responsive" alt="Screenshot of Sort It!! puzzle game"></a>
+                    <div class="portfolio-caption"><h4>Sort it!!</h4><p class="text-muted">A Puzzle Game</p></div>
+                </div>
+                <div class="col-md-3 col-sm-6 grid-item">
+                    <a href="https://play.google.com/store/apps/details?id=com.agi.billsplit" class="portfolio-link"><img src="images/bill.webp" class="img-responsive" alt="Screenshot of Bill Splitter app"></a>
+                    <div class="portfolio-caption"><h4>Bill Splitter</h4><p class="text-muted">Track individual expenses</p></div>
+                </div>
+                <div class="col-md-3 col-sm-6 grid-item">
+                    <a href="https://play.google.com/store/apps/details?id=com.harishkumar.android.examprep" class="portfolio-link"><img src="images/exam.webp" class="img-responsive" alt="Screenshot of Exam Prep app"></a>
+                    <div class="portfolio-caption"><h4>Exam Prep</h4><p class="text-muted">Helps students prepare</p></div>
+                </div>
+                <div class="col-md-3 col-sm-6 grid-item">
+                    <a href="https://play.google.com/store/apps/details?id=com.charan.saicharanreddy.bloodbank" class="portfolio-link"><img src="images/blood.webp" class="img-responsive" alt="Screenshot of Blood Bank app"></a>
+                    <div class="portfolio-caption"><h4>Blood Bank</h4><p class="text-muted">Find blood donors</p></div>
+                </div>
+                <div class="col-md-3 col-sm-6 grid-item">
+                    <a href="https://play.google.com/store/apps/developer?id=ANURAG%20ANDROID%20CLUB&hl=en" class="portfolio-link"><img src="img/portfolio/others2.png" class="img-responsive" alt="Logo for the Anurag Android Club on Google Play Store"></a>
+                    <div class="portfolio-caption"><h4>AAC Playstore</h4><p class="text-muted">Click to see all our apps</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Achievements</h2>
+                    <h3 class="section-subheading">A timeline of our major milestones.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="timeline">
+                        <li>
+                            <div class="timeline-image"><img class="img-circle" src="img/about/5.png" alt="First prize trophy for TechXcelerate 2025"></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading"><h4>2025</h4><h4 class="subheading">Winners of TechXcelerate</h4></div>
+                                <div class="timeline-body"><p class="text-muted">Our team won first prize in showcasing an innovative app-based solution.</p></div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image"><img class="img-circle" src="img/about/4.jpg" alt="Team members celebrating win at TechHack 2024"></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading"><h4>2024</h4><h4 class="subheading">Winners of TechHack</h4></div>
+                                <div class="timeline-body"><p class="text-muted">Our team members won the TechHack competition by developing a feature-rich mobile app.</p></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image"><img class="img-circle" src="images/apps.png" alt="Students presenting their apps to the Dean in 2022"></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading"><h4>2022</h4><h4 class="subheading">Submission of Android apps</h4></div>
+                                <div class="timeline-body"><p class="text-muted">Our students got rewarded by our Dean - School of Engineering.</p></div>
+                            </div>
+                        </li>
+                         <li class="timeline-inverted">
+                            <div class="timeline-image"><img class="img-circle" src="images/pulse.jpg" alt="Logo of the AU Pulse app, launched in 2021"></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading"><h4>2021</h4><h4 class="subheading">Launch of AU Pulse</h4></div>
+                                <div class="timeline-body"><p class="text-muted">Our students successfully deployed the AU Pulse app in the playstore.</p></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image"><img class="img-circle" src="images/codechef.jpg" alt="Logo of the Codechef-AU app, launched in 2020"></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading"><h4>2020</h4><h4 class="subheading">Launch of Codechef-AU</h4></div>
+                                <div class="timeline-body"><p class="text-muted">Our students created this app for conducting coding related competitions.</p></div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image"><img class="img-circle" src="images/eventium.png" alt="Logo of the Eventium app, launched in 2019"></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading"><h4>2019</h4><h4 class="subheading">Launch of eventium</h4></div>
+                                <div class="timeline-body"><p class="text-muted">Our students successfully deployed the eventium app in the playstore.</p></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image"><img class="img-circle" src="img/about/3.jpg" alt="Group of students holding RankSheet certificates in 2017"></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading"><h4>2017</h4><h4 class="subheading">Certificate By RankSheet</h4></div>
+                                <div class="timeline-body"><p class="text-muted">59 of our students were certified as Android Professionals by RankSheet.</p></div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image"><img class="img-circle" src="img/about/1.jpg" alt="Four students at NADC Grand Finale at IIT Madras in 2016"></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading"><h4>March 2016</h4><h4 class="subheading">Being Selected in NADC as finalists</h4></div>
+                                <div class="timeline-body"><p class="text-muted">Among a huge lot of students for NADC, 4 of our students were selected for the Grand Finale at IIT Madras.</p></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image"><img class="img-circle" src="img/about/2.jpg" alt="Students with Zonal Merit certificates from NADC in 2016"></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading"><h4>2016</h4><h4 class="subheading">Certificate of Merit By NADC</h4></div>
+                                <div class="timeline-body"><p class="text-muted">Our students received the Zonal Merit certificate awarded by NADC.</p></div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image"><h4>And Many<br>More!</h4></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <section id="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Our Amazing Team</h2>
+                    <h3 class="section-subheading">The core members leading the club.</h3>
+                </div>
+            </div>
+
+            <div class="row grid-container" style="margin-bottom: 30px;">
+                <div class="col-md-4 col-sm-6 grid-item">
+                    <div class="team-member">
+                        <img src="images/BhagyaRekha.jpg" class="img-responsive" alt="Photo of Bhagya Rekha">
+                        <div class="portfolio-caption"><h4>Bhagya Rekha</h4><p class="text-muted">Faculty Lead</p></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 grid-item">
+                    <div class="team-member">
+                        <img src="images/Harsha.png" class="img-responsive" alt="Photo of Harsha">
+                        <div class="portfolio-caption"><h4>Harsha</h4><p class="text-muted">President</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row grid-container" style="margin-bottom: 30px;">
+                <div class="col-md-4 col-sm-6 grid-item">
+                    <div class="team-member">
+                        <img src="images/Diksitha.JPG" class="img-responsive" alt="Photo of A. Dikshitha Reddy">
+                        <div class="portfolio-caption"><h4>A. Dikshitha Reddy</h4><p class="text-muted">Vice President Technical</p></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 grid-item">
+                    <div class="team-member">
+                        <img src="images/Rachita.jpg" class="img-responsive" alt="Photo of G. Rachitha">
+                        <div class="portfolio-caption"><h4>G. Rachitha</h4><p class="text-muted">Vice President Organising</p></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 grid-item">
+                    <div class="team-member">
+                        <img src="images/esha.jpg" class="img-responsive" alt="Photo of V. Esha Reddy">
+                        <div class="portfolio-caption"><h4>V. Esha Reddy</h4><p class="text-muted">Vice President Public Relations</p></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 grid-item">
+                    <div class="team-member">
+                        <img src="images/Thejaswee Shivakoti.jpg" class="img-responsive" alt="Photo of S. Thejaswee">
+                        <div class="portfolio-caption"><h4>S. Thejaswee</h4><p class="text-muted">Treasurer</p></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 grid-item">
+                    <div class="team-member">
+                        <img src="images/vignesh.jpg" class="img-responsive" alt="Photo of B. Vigneshwar">
+                        <div class="portfolio-caption"><h4>B. Vigneshwar</h4><p class="text-muted">App Developer</p></div>
+                    </div>
+                </div>
+                 <div class="col-md-4 col-sm-6 grid-item">
+                    <div class="team-member">
+                        <img src="images/poojan.jpg" class="img-responsive" alt="Photo of Poojan">
+                        <div class="portfolio-caption"><h4>Poojan</h4><p class="text-muted">Website Developer</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row grid-container">
+                <div class="col-md-4 col-sm-6 grid-item">
+                    <div class="team-member">
+                        <img src="images/Ranjith.jpeg" class="img-responsive" alt="Photo of D. Ranjith">
+                        <div class="portfolio-caption"><h4>D. Ranjith</h4><p class="text-muted">Social Media & Design Lead</p></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <span class="copyright">Copyright Anurag Android Club &copy</span>
+                    <h4>Anurag Android Club</h4>
+                    <p class="copyright">Anurag University, <br>Ghatkesar, Hyderabad, Telangana</p>
                 </div>
-                
+                <div class="col-md-4">
+                    <h4>Follow Us</h4>
+                    <ul class="list-inline social-buttons">
+                        <li><a href="https://www.instagram.com/android__au/profilecard/?igsh=enh0aTZ6eG1wNm9q" aria-label="Visit our Instagram profile" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/android-club/" aria-label="Visit our LinkedIn profile" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://github.com/androidclubau"aria-label="Visit our GitHub profile" target="_blank"><i class="fa fa-github"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                       <span class="copyright">Copyright &copy; Anurag Android Club 2025</span>
+                </div>
             </div>
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     
-
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
-
-    <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
 
 </body>
-
 </html>
